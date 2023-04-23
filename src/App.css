@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 * {
   margin: 0;
@@ -10,4 +10,6 @@
 body {
   position: relative;
   font-size: 14px;
+  background-color: #d3d3d3;
+  color: #a9a9a9;
 }

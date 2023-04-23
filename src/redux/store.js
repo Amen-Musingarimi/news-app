@@ -1,9 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import companiesReducer from './news/companiesSlice';
+import headlinesReducer from './headlines/headlinesSlice';
+import techReducer from './technology/technologySlice';
+import politicsReducer from './politics/politicsSlice';
+import sportsReducer from './sports/sportsSlice';
 
 const store = configureStore({
   reducer: {
-    company: companiesReducer,
+    headline: headlinesReducer,
+    technology: techReducer,
+    politic: politicsReducer,
+    sport: sportsReducer,
   },
 });
 
