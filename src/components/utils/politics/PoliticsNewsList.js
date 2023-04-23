@@ -17,7 +17,7 @@ const PoliticsNewsList = () => {
 
   return (
     <div className="headlines-container">
-      <h2 className="page-heading">TECH NEWS</h2>
+      <h2 className="page-heading">POLITICS NEWS</h2>
       <div className="headline-list">
         {politics.map((politic) => (
           <PoliticsNewsItem

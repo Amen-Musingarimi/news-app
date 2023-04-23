@@ -17,7 +17,7 @@ const SportsNewsList = () => {
 
   return (
     <div className="headlines-container">
-      <h2 className="page-heading">TECH NEWS</h2>
+      <h2 className="page-heading">SPORTS NEWS</h2>
       <div className="headline-list">
         {sports.map((technology) => (
           <SportsNewsItem

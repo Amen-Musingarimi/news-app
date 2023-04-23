@@ -49,3 +49,8 @@ nav a {
   text-decoration: underline;
   color: #a9a9a9;
 }
+
+.active {
+  color: #fff !important;
+  text-decoration: underline !important;
+}

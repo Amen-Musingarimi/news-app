@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import '../styles/NavBar.css';
 
@@ -6,15 +6,23 @@ const NavBar = () => {
   return (
     <header>
       <nav className="nav-container">
-        <Link to="/" className="logo-container">
+        <NavLink to="/" exact className="logo-container">
           <img src={logo} alt="Logo" className="logo-image"></img>
           <span>The News Wave</span>
-        </Link>
+        </NavLink>
         <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/technology">Technology</Link>
-          <Link to="/politics">Politics</Link>
-          <Link to="/sports">Sports</Link>
+          <NavLink to="/" exact activeClassName="active">
+            Home
+          </NavLink>
+          <NavLink to="/technology" activeClassName="active">
+            Technology
+          </NavLink>
+          <NavLink to="/politics" activeClassName="active">
+            Politics
+          </NavLink>
+          <NavLink to="/sports" activeClassName="active">
+            Sports
+          </NavLink>
         </div>
       </nav>
     </header>
