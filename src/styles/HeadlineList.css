@@ -11,13 +11,32 @@
   gap: 14px;
 }
 
-.page-heading {
-  font-size: 14px;
-  font-weight: 800;
-  color: #000;
-  text-align: center;
-  text-decoration: underline;
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
+}
+
+.filter-container {
+  align-items: end;
+}
+
+.page-heading,
+.filter-heading {
+  font-size: 14px;
+  color: #000;
+}
+
+.page-heading {
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.filter-heading {
+  font-weight: 600;
+  color: #36454f;
+  margin-right: 10px;
 }
 
 .headline-image {

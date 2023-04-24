@@ -17,8 +17,14 @@ const HeadlineLink = ({ title, image, author, date, description, url }) => {
 
   return (
     <div className="headline-container">
-      <h2 className="headline-title">{title}</h2>
-      <img src={image} alt="NewsImage" className="headline-image"></img>
+      <div className="header-container">
+        <h2 className="headline-title">{title}</h2>
+      </div>
+      <img
+        src={image || alternativeImage}
+        alt="NewsImage"
+        className="headline-image"
+      ></img>
       <div className="author-date-container">
         <h3 className="author-name">{authorName}</h3>
         <p className="publishing-date">{formattedDate}</p>
