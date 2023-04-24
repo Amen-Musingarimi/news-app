@@ -4,7 +4,7 @@ export const getTopHeadlinesAsync = createAsyncThunk(
   'headlines/getTopHeadlinesAsync',
   async (countryCode) => {
     const response = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=${countryCode}&apiKey=bb79e57bfe4645cfa7f0af77e3d74e2b`
+      `https://newsapi.org/v2/top-headlines?country=${countryCode}&apiKey=48710232470442d0ab583fe56e115168`
     );
     if (response.ok) {
       const data = await response.json();

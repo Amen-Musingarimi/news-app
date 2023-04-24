@@ -29,13 +29,18 @@ const HeadlinesList = () => {
             Filter by country:
           </label>
           <select
+            className="select-container"
             id="countries"
             value={selectedCountry}
             onChange={handleChange}
           >
             <option value="">--Select a country--</option>
             {countries.map((country) => (
-              <option key={country.code} value={country.code}>
+              <option
+                className="option"
+                key={country.code}
+                value={country.code}
+              >
                 {country.name}
               </option>
             ))}

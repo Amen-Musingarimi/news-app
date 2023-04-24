@@ -1,11 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const url =
-  'https://newsapi.org/v2/everything?q=sports&apiKey=bb79e57bfe4645cfa7f0af77e3d74e2b';
 export const getSportsNewsAsync = createAsyncThunk(
   'sports/getSportsNewsAsync',
-  async () => {
-    const response = await fetch(url);
+  async (sport) => {
+    const response = await fetch(
+      `https://newsapi.org/v2/everything?q=${sport}&apiKey=48710232470442d0ab583fe56e115168`
+    );
     if (response.ok) {
       const data = await response.json();
       const sports = data.articles;

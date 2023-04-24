@@ -13,15 +13,15 @@ const PoliticsNewsList = () => {
     dispatch(getPoliticsNewsAsync());
   }, [dispatch]);
 
-  const id = uuidv4();
-
   return (
     <div className="headlines-container">
-      <h2 className="page-heading">POLITICS NEWS</h2>
+      <div className="page-header">
+        <h2 className="page-heading">POLITICS NEWS</h2>
+      </div>
       <div className="headline-list">
         {politics.map((politic) => (
           <PoliticsNewsItem
-            key={id}
+            key={politic.title}
             title={politic.title}
             image={politic.urlToImage}
             author={politic.author}

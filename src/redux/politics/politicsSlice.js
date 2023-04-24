@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const url =
-  'https://newsapi.org/v2/everything?q=politics&apiKey=bb79e57bfe4645cfa7f0af77e3d74e2b';
+  'https://newsapi.org/v2/everything?q=politics&apiKey=48710232470442d0ab583fe56e115168';
 export const getPoliticsNewsAsync = createAsyncThunk(
   'politics/getPoliticsNewsAsync',
   async () => {

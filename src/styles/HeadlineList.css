@@ -59,6 +59,16 @@
   border-radius: 4px;
 }
 
+.select-container {
+  outline: none;
+  padding: 6px;
+  font-weight: 500;
+}
+
+.option {
+  font-weight: 500;
+}
+
 .headline-title {
   font-size: 17px;
 }
@@ -84,4 +94,12 @@
 
 .news-link:hover {
   color: #7393b3;
+}
+
+.error-message {
+  color: #000;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 60px;
 }
