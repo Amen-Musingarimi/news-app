@@ -6,21 +6,21 @@ const NavBar = () => {
   return (
     <header>
       <nav className="nav-container">
-        <NavLink to="/" exact className="logo-container">
+        <NavLink to="/" exact="true" className="logo-container">
           <img src={logo} alt="Logo" className="logo-image"></img>
           <span>The News Wave</span>
         </NavLink>
         <div className="nav-links">
-          <NavLink to="/" exact activeClassName="active">
+          <NavLink to="/" exact="true" activeclassname="active">
             Home
           </NavLink>
-          <NavLink to="/technology" activeClassName="active">
+          <NavLink to="/technology" activeclassname="active">
             Technology
           </NavLink>
-          <NavLink to="/politics" activeClassName="active">
+          <NavLink to="/politics" activeclassname="active">
             Politics
           </NavLink>
-          <NavLink to="/sports" activeClassName="active">
+          <NavLink to="/sports" activeclassname="active">
             Sports
           </NavLink>
         </div>

@@ -15,11 +15,16 @@ const PoliticsNewsItem = ({ title, image, author, date, description, url }) => {
     ? description.substring(0, description.indexOf('['))
     : '';
 
+  const handleImageError = (event) => {
+    event.target.src = alternativeImage;
+  };
+
   return (
     <div className="headline-container">
       <h2 className="headline-title">{title}</h2>
       <img
         src={image || alternativeImage}
+        onError={handleImageError}
         alt="NewsImage"
         className="headline-image"
       ></img>

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getSportsNewsAsync } from '../../../redux/sports/sportsSlice';
 import SportsNewsItem from './SportNewsItem';
 import sportsArray from '../sports';
+import { v4 as uuidv4 } from 'uuid';
 import '../../../styles/HeadlineList.css';
 
 const SportsNewsList = () => {
@@ -81,7 +82,7 @@ const SportsNewsList = () => {
         <div className="headline-list">
           {sports.map((technology) => (
             <SportsNewsItem
-              key={technology.title}
+              key={uuidv4()}
               title={technology.title}
               image={technology.urlToImage}
               author={technology.author}

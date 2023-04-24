@@ -15,6 +15,10 @@ const SportsNewsItem = ({ title, image, author, date, description, url }) => {
     ? description.substring(0, description.indexOf('['))
     : '';
 
+  const handleImageError = (event) => {
+    event.target.src = alternativeImage;
+  };
+
   return (
     <div className="headline-container">
       <h2 className="headline-title">{title}</h2>
@@ -22,6 +26,7 @@ const SportsNewsItem = ({ title, image, author, date, description, url }) => {
         src={image || alternativeImage}
         alt="NewsImage"
         className="headline-image"
+        onError={handleImageError}
       ></img>
       <div className="author-date-container">
         <h3 className="author-name">{authorName}</h3>

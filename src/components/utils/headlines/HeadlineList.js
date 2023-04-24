@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getTopHeadlinesAsync } from '../../../redux/headlines/headlinesSlice';
+import { v4 as uuidv4 } from 'uuid';
 import HeadlineLink from './HeadlineLink';
 import countries from '../contries';
 import '../../../styles/HeadlineList.css';
@@ -50,7 +51,7 @@ const HeadlinesList = () => {
       <div className="headline-list">
         {headlines.map((headline) => (
           <HeadlineLink
-            key={headline.title}
+            key={uuidv4()}
             title={headline.title}
             image={headline.urlToImage}
             author={headline.author}

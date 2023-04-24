@@ -3,12 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getTechNewsAsync } from '../../../redux/technology/technologySlice';
 import TechnologyItem from './TechnologyItem';
 import techCategories from '../techCategories';
+import { v4 as uuidv4 } from 'uuid';
 import '../../../styles/HeadlineList.css';
 
 const TechnologyList = () => {
-  const [selectedCategory, setSelectedCategory] = useState(
-    'softwaredevelopment'
-  );
+  const [selectedCategory, setSelectedCategory] = useState('ai');
   const dispatch = useDispatch();
   const { technologies } = useSelector((state) => state.technology);
 
@@ -18,7 +17,6 @@ const TechnologyList = () => {
 
   const handleChange = (event) => {
     const category = event.target.value;
-    console.log(category);
     setSelectedCategory(category);
     dispatch(getTechNewsAsync(category));
   };
@@ -53,7 +51,7 @@ const TechnologyList = () => {
       <div className="headline-list">
         {technologies.map((technology) => (
           <TechnologyItem
-            key={technology.title}
+            key={uuidv4()}
             title={technology.title}
             image={technology.urlToImage}
             author={technology.author}

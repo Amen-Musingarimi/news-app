@@ -21,7 +21,7 @@ const PoliticsNewsList = () => {
       <div className="headline-list">
         {politics.map((politic) => (
           <PoliticsNewsItem
-            key={politic.title}
+            key={uuidv4()}
             title={politic.title}
             image={politic.urlToImage}
             author={politic.author}
